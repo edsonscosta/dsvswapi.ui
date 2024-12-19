@@ -1,0 +1,21 @@
+<!-- src/app/planet-list/planet-list.component.html -->
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Climate</th>
+        <th>Terrain</th>
+        <th>Residents</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planet of planets">
+        <td>{{ planet.id }}</td>
+        <td>{{ planet.name }}</td>
+        <td>{{ planet.climate }}</td>
+        <td>{{ planet.terrain }}</td>
+        <td><a [href]="'http://localhost:5156/v1/planets/' + planet.id + '/residents'">Residents</a></td>
+      </tr>
+    </tbody>
+  </table>
